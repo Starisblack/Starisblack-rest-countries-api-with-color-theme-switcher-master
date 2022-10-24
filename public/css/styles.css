@@ -159,6 +159,10 @@ body {
       opacity: 1;
       color: #6c757d;
      }
+
+     .languages-list-box p{
+      margin-top: 5px;
+     }
      
    
     .country-detail-box{
@@ -235,7 +239,6 @@ body {
 
   .country-detail-box{
     padding: 1rem  !important;
-    margin-top: 4rem;
   }
 
 
@@ -254,6 +257,9 @@ body {
       font-size: 0.8rem;
     }
   
+    .flag-img{
+      height: 200px;
+    }
 
   .css-i4bv87-MuiSvgIcon-root{
     height: .8rem !important;
