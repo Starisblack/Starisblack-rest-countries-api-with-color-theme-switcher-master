@@ -1,0 +1,43 @@
+.countryList-container{
+  padding: 4% 7%;
+ }
+
+.card{
+    border-radius: 10px;
+    padding-bottom: 1.6rem;
+    width: 18.2rem;
+    margin: 0 auto;
+  }
+
+  .card-body{
+   padding-left: 1.6rem;
+  }
+
+  a{
+   text-decoration: none;
+   color: black;
+  }
+
+  a:hover{
+   color: black;
+   opacity: 0.6;
+  }
+
+  .card p{
+   font-size: 15px;
+   margin: 5px 0;
+   opacity: 1;
+   color: #6c757d;
+  }
+
+ 
+
+  .card img{
+    border-radius: 10px 10px 0 0 !important;
+    height: 160px !important;
+ 
+   }
+
+  .card-title{
+   font-weight: 600;
+  }

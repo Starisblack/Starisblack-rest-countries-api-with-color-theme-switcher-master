@@ -1,0 +1,262 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+      color: black;
+      background-color: hsl(0, 0%, 98%);
+  }
+
+  .container-fluid{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5% 7%;
+    align-items: center;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-container p{
+    cursor: pointer;
+  }
+  
+  h4, p {
+    margin: 0;
+  }
+  h4{
+    font-weight: 800;
+  }
+  
+  p{
+    font-weight: 600;
+  }
+
+
+  .search-container{
+    padding: 4% 7%;
+   }
+   
+   
+   .search{
+     position: relative;
+     box-shadow: 0 0 40px rgba(51, 51, 51, .1); 
+     }
+   
+     .search input{
+   
+      height: 60px;
+      text-indent: 25px;
+      border: none;
+      padding: 2.2rem 2.5rem;
+      border-radius: 10px;
+   
+     }
+
+     .search .fa-search{
+ 
+        position: absolute;
+        top: 25px;
+        left: 26px;
+        font-size: 1.5rem;
+     
+       }
+   
+     .search input::placeholder{
+       padding-left: 1.5rem;
+       color: rgba(0, 0, 0, 0.527);
+     }
+   
+     .search input:focus{
+   
+      box-shadow: none;
+      border: 2px solidue;
+   
+     }
+
+     .dropdown-menu {
+        min-width: 13.6rem;
+        top: 5px !important;
+        border-radius: 10px;
+       }
+
+       ul{
+        list-style-type: none;
+        padding: 0;
+       }
+    
+       li{
+        margin: 0.5rem 0;
+        cursor: pointer;
+        padding: 0 2rem ;
+       } 
+    
+       li:hover {
+        background-color: hsl(0deg 0% 52% / 19%);
+      }
+
+
+      /* button styling start */
+    
+      .btn-primary{
+        text-align: left;
+        padding: .9rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 40px rgba(51, 51, 51, .1) !important;
+        border: none;
+        font-size: 1.25rem;
+        color: black;
+        background-color: white;
+       }
+
+
+       .btn-primary:hover, .btn-primary:active, .show>.btn-primary.dropdown-toggle, .btn-primary:focus{
+        background-color: white !important;
+        color: black !important;
+        border-color: #0a53be00 !important;
+       }
+    
+       .btn-primary:focus, .btn-primary:active {
+        outline: none !important;
+        box-shadow: none !important;
+     }
+
+
+    
+     
+       .dropdown-toggle::after {
+        margin-left: 1.2rem;
+       }
+
+       /* /* button styling ends */
+
+       .back-btn{
+        padding: .4rem 2rem;
+        font-size: 1rem;
+        box-shadow: 0 0 40px rgba(51, 51, 51, .1) !important;
+        border: none;
+      }
+      
+      .singleCountry-container{
+        padding: 7% 5%;
+      }
+
+      
+      .flag-img{
+        width: 100%;
+        height: 370px;
+      }
+
+      .category{
+        color: black;
+     }
+
+     .singleCountry-container p{
+      font-size: 15px;
+      margin: 15px 0;
+      opacity: 1;
+      color: #6c757d;
+     }
+     
+   
+    .country-detail-box{
+      padding-left: 2.5rem;
+    }
+
+    
+    
+  
+    .borderCountries-container p {
+      padding: 5px 30px;
+      text-align: center;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 40px rgb(51 51 51 / 10%);
+      font-size: 12px !important;
+      margin: 5px 0;
+    }
+
+
+    .languages-list-box{
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .borderCountries-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    
+    .borderCountries-container h5{
+      margin: 0 !important;
+      font-weight: 600; 
+      font-size: 1rem;
+    }
+
+    .dark .card, 
+    .dark .header-container, 
+    .dark .searchInput, 
+    .dark .btn-primary, .dark .btn-primary:hover, .dark .show>.btn-primary.dropdown-toggle, 
+    .dark .dropdown-menu, 
+    .dark .borderCountries-container p, 
+    .dark .back-btn{
+      background-color: hsl(209, 23%, 22%) !important;
+      color: white !important;
+    }
+
+    .dark .category, 
+    .dark .card-body p,
+    .dark .singleCountry-container p,
+    .dark .searchInput::placeholder {
+      color: white;
+    }
+
+    .dark #root{
+      background-color:  hsl(207, 26%, 17%);
+      color: white;
+    }
+
+    
+
+
+@media screen and (max-width: 740px) {
+
+    .text-end {
+      text-align: left!important;
+      margin: 1rem 0;
+  }
+
+  .country-detail-box{
+    padding: 1rem  !important;
+    margin-top: 4rem;
+  }
+
+
+
+
+
+   }
+
+@media screen and (max-width: 450px) {
+
+    .header-container{
+      padding: 2.5% 7%;
+    }
+
+    h4, .header-container p {
+      font-size: 0.8rem;
+    }
+  
+
+  .css-i4bv87-MuiSvgIcon-root{
+    height: .8rem !important;
+    width: .8rem !important;
+  }
+}
