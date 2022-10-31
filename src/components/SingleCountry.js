@@ -139,7 +139,7 @@ const newBorderCOuntries = borderCountries.filter((country, index) => {
 
           <div className="languages-list-box">
             <p><span className="category">Currencies:</span></p>
-            {countryData.currencies.map( (currency, index) =>{ return <p key={index}> {currency.name} </p>})}
+            {countryData?.currencies?.map( (currency, index) =>{ return <p key={index}> {currency.name} </p>})}
           </div>
 
           <div className="languages-list-box">

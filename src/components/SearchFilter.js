@@ -5,6 +5,13 @@ function SearchFilterBox (props){
 
 
 
+
+ 
+
+
+
+
+
             
       return(  <div   className="container-fluid search-container ">
        
@@ -12,9 +19,9 @@ function SearchFilterBox (props){
 
                       <div className="col-md-5">
 
-                        <div className="search">
+                        <div  className="search">
                           <SearchIcon  className="fa-search"/>
-                          <input type="text"   onChange= {props.searchInput}  value={props.userInput} className="searchInput form-control" placeholder="Search for a country..."/>
+                          <input   type="text"  onChange= {props.searchInput}  value={props.userInput} className="searchInput form-control" placeholder="Search for a country..."/>
                 
                         </div>
 
@@ -31,6 +38,7 @@ function SearchFilterBox (props){
                         <div>
                          <Dropdown.Menu style={ props.switchColor ? props.customStyle : null}>
                             <ul  >
+                              <li onClick={()=> props.filtered("All")}> All</li>
                               <li onClick={()=> props.filtered("Africa")}> Africa</li>
                               <li onClick={()=> props.filtered("Americas")}>  America </li> 
                               <li onClick={()=> props.filtered("Asia")}> Asia  </li>

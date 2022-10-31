@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import SearchFilterBox from "./SearchFilter";
 import Card from "./Card"
 import  axios  from "axios";
-// import {orderBy} from "lodash";
 import { HalfMalf } from "react-spinner-animated";
 import 'react-spinner-animated/dist/index.css'
+import BasicModal from "./Modal";
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
   const [searchParam, setSearchParam] = useState(false);
  
  
+// I used searchParam to detect whether the user is using search component or Filter button 
 
 
   useEffect(()=>{
@@ -22,7 +23,7 @@ function App() {
    axios.get("https://restcountries.com/v2/all/?fields=name,population,region,capital,flags,numericCode")
     .then(function (response) {
 
-      // const sortedCountryList = orderBy(response.data, ["name"], ["asc"]);
+      
       
       setAllCountriesData(response.data);
 
@@ -32,17 +33,13 @@ function App() {
 
     })
     .catch(function (error) {
-      // handle error
+      
+
       console.log(error);
     })
 
 
   }, [])
-
-
-
- 
-
 
 
 
@@ -61,7 +58,9 @@ function searchInput (e){
 
 function filtered (region){
 
+  document.querySelector(".dropdown-menu").classList.remove("show");
   setFilterParam(region);
+
   setSearchParam(true)
 
 }
@@ -71,9 +70,23 @@ function filtered (region){
 // this function use to filter the countries by region using dropdown list
 
 
-function searchByRegion (countriesData){
+function filterByRegion (countriesData){
 
-  return countriesData.filter(country => (country.region.toLowerCase() === filterParam.toLowerCase() ))
+
+  return countriesData.filter(country =>  {
+
+    if( country.region.toLowerCase() === filterParam.toLowerCase() ){
+
+      return countriesData;
+
+    } else if ( filterParam === "All") {
+
+       return countriesData;
+    }
+    
+    // (country.region.toLowerCase() === filterParam.toLowerCase() )
+  
+  })
 
 }
 
@@ -91,8 +104,6 @@ function search (countriesData){
 
 
 
-
-
   return (
     <div>
 
@@ -102,9 +113,11 @@ function search (countriesData){
       filtered   ={filtered}
     />
 
+    <BasicModal />
+
      { loadingData ?  <HalfMalf   text={"Loading..."} center={false}/> : <Card  
     
-     data={ searchParam ? searchByRegion(countriesData) : search(countriesData)}/>  
+     data={ searchParam ? filterByRegion(countriesData) : search(countriesData)}/>  
      
      }
 
