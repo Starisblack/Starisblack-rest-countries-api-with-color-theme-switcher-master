@@ -4,7 +4,7 @@ import Card from "./Card"
 import  axios  from "axios";
 import { HalfMalf } from "react-spinner-animated";
 import 'react-spinner-animated/dist/index.css'
-import BasicModal from "./Modal";
+
 
 function App() {
 
@@ -115,7 +115,7 @@ function search (countriesData){
       filtered   ={filtered}
     />
 
-    <BasicModal />
+  
 
      { loadingData ?  <HalfMalf   text={"Loading..."} center={false}/> : <Card  
     
