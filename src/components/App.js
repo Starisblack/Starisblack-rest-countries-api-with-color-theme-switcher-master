@@ -73,7 +73,9 @@ function filtered (region){
 function filterByRegion (countriesData){
 
 
-  return countriesData.filter(country =>  {
+  // eslint-disable-next-line array-callback-return
+  return countriesData.filter( (country) => {
+
 
     if( country.region.toLowerCase() === filterParam.toLowerCase() ){
 
